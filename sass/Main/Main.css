@@ -1,0 +1,452 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body, html {
+  width: 100%;
+  height: 100%;
+  color: #fff;
+}
+
+.wrapper {
+  width: 100%;
+  height: 100%;
+  background-image: url("../../imgs/backgrounds/morning.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.wrapper-content {
+  width: 75vw;
+  height: 85vh;
+  background-image: linear-gradient(45deg, rgba(0, 225, 255, 0.219), rgba(0, 195, 255, 0.233));
+  border-radius: 2vw;
+  border-bottom-right-radius: 0.2vw;
+  border-bottom-left-radius: 0.2vw;
+  -webkit-box-shadow: 0 0 1vw 0.1vw rgba(0, 0, 0, 0.562);
+          box-shadow: 0 0 1vw 0.1vw rgba(0, 0, 0, 0.562);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-transition-duration: 0.4s;
+          transition-duration: 0.4s;
+}
+
+.wrapper-content-header {
+  width: 100%;
+  height: 10%;
+  border-top-left-radius: 2vw;
+  border-top-right-radius: 2vw;
+  background-image: linear-gradient(45deg, #00e1ff, rgba(0, 195, 255, 0.568));
+  -webkit-box-shadow: 0 0.5vw 1vw 0.1vw rgba(0, 0, 0, 0.587);
+          box-shadow: 0 0.5vw 1vw 0.1vw rgba(0, 0, 0, 0.587);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.wrapper-content-header-wrapper {
+  width: 100%;
+  height: 100%;
+  margin: 1vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.wrapper-content-header-wrapper-input {
+  height: 100%;
+  width: 57%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.wrapper-content-header-wrapper-input_input {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  font-weight: bold;
+  color: #fff;
+  background: transparent;
+  border: none;
+  font-family: 'PT Sans', sans-serif;
+  font-size: 2.5vw;
+}
+
+.wrapper-content-header-wrapper-date {
+  height: 100%;
+  width: 33%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.wrapper-content-header-wrapper-date_date {
+  width: 100%;
+  height: 90%;
+  text-align: center;
+  cursor: pointer;
+  font-size: 3vw;
+  font-weight: bold;
+  color: #757575;
+  background: transparent;
+  border: none;
+  font-family: 'PT Sans', sans-serif;
+  font-size: 2.5vw;
+}
+
+.wrapper-content-header-wrapper-button {
+  height: 100%;
+  width: 10%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: hidden;
+}
+
+.wrapper-content-header-wrapper-button_button {
+  width: 3vw;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.wrapper-content-header-wrapper-button_button-icon {
+  width: 100%;
+  height: 100%;
+}
+
+.wrapper-content-tasks {
+  display: block;
+  width: 100%;
+  height: 90%;
+  overflow-y: scroll;
+}
+
+.wrapper-content-tasks-task {
+  width: 0%;
+  min-height: 8vh;
+  margin-top: 2.5vh;
+  margin-bottom: 2.5vh;
+  border-radius: 2vw;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  background-image: linear-gradient(45deg, #00e1ff, rgba(0, 195, 255, 0.568));
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-transition-duration: 0.4s;
+          transition-duration: 0.4s;
+  overflow: hidden;
+}
+
+.wrapper-content-tasks-task-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 100%;
+  font-family: 'PT Sans', sans-serif;
+  overflow: hidden;
+}
+
+.wrapper-content-tasks-task-header_title {
+  height: 100%;
+  width: 40%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 1vw;
+  overflow-x: auto;
+}
+
+.wrapper-content-tasks-task-header_title h1 {
+  font-size: 2vw;
+  font-weight: bold;
+}
+
+.wrapper-content-tasks-task-header_date {
+  height: 100%;
+  width: 20%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: hidden;
+}
+
+.wrapper-content-tasks-task-header_date p {
+  overflow: hidden;
+  font-size: 2vw;
+  font-weight: normal;
+}
+
+.wrapper-content-tasks-task-header_time {
+  height: 100%;
+  width: 10%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: hidden;
+}
+
+.wrapper-content-tasks-task-header_time p {
+  font-size: 2vw;
+  font-weight: normal;
+}
+
+.wrapper-content-tasks-task-header_time span {
+  font-size: 2vw;
+  font-weight: bold;
+}
+
+.wrapper-content-tasks-task-header-crossout {
+  height: 100%;
+  width: 10%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: hidden;
+}
+
+.wrapper-content-tasks-task-header-crossout_button {
+  width: 3vw;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.wrapper-content-tasks-task-header-crossout_button-icon {
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+  width: 100%;
+  height: 100%;
+}
+
+.wrapper-content-tasks-task-header-remove {
+  height: 100%;
+  width: 10%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: hidden;
+}
+
+.wrapper-content-tasks-task-header-remove_button {
+  width: 3vw;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
+
+.wrapper-content-tasks-task-header-remove_button-icon {
+  width: 100%;
+  height: 100%;
+}
+
+.wrapper-content-tasks-task-desc {
+  width: 100%;
+  height: 0;
+}
+
+.wrapper-content-tasks::-webkit-scrollbar {
+  background: rgba(17, 17, 17, 0.136);
+  width: 0.7vw;
+  border-bottom-right-radius: 0.2vw;
+}
+
+.wrapper-content-tasks::-webkit-scrollbar-thumb {
+  background: rgba(0, 225, 255, 0.783);
+  border-radius: 2vw;
+}
+
+.wrapper-content-tasks-task-header_title::-webkit-scrollbar {
+  background: rgba(17, 17, 17, 0.136);
+  height: 0.7vh;
+  border-bottom-right-radius: 0.2vw;
+}
+
+.wrapper-content-tasks-task-header_title::-webkit-scrollbar-thumb {
+  background: rgba(0, 225, 255, 0.783);
+  border-radius: 2vw;
+}
+
+@media only screen and (max-width: 900px) {
+  div.wrapper-content {
+    width: 90vw;
+    height: 95vh;
+  }
+}
+
+@media only screen and (max-width: 740px) {
+  div.wrapper-content {
+    width: 100%;
+    height: 100%;
+  }
+  div.wrapper-content-header {
+    border-radius: 0;
+  }
+  div.wrapper-content-header-wrapper {
+    margin: 0;
+  }
+  div.wrapper-content-header-wrapper-input {
+    width: 53%;
+  }
+  input.wrapper-content-header-wrapper-input_input {
+    font-size: 4.5vw;
+  }
+  div.wrapper-content-header-wrapper-date {
+    width: 53%;
+  }
+  input.wrapper-content-header-wrapper-date_date {
+    font-size: 4.5vw;
+  }
+  div.wrapper-content-header-wrapper-button {
+    width: 15%;
+  }
+  a.wrapper-content-header-wrapper-button_button {
+    width: 6vw;
+  }
+  div.wrapper-content-tasks-task {
+    width: 100%;
+  }
+  div.wrapper-content-tasks-task-header_title {
+    width: 35%;
+  }
+  h1.wrapper-content-tasks-task-header_title-title {
+    font-size: 4.5vw;
+  }
+  div.wrapper-content-tasks-task-header_date {
+    width: 25%;
+  }
+  p.wrapper-content-tasks-task-header_date-date {
+    font-size: 4.5vw;
+  }
+  div.wrapper-content-tasks-task-header_time {
+    width: 15%;
+  }
+  p.wrapper-content-tasks-task-header_time-time {
+    font-size: 4.5vw;
+  }
+  div.wrapper-content-tasks-task-header-crossout_button {
+    width: 6vw;
+  }
+  div.wrapper-content-tasks-task-header-remove_button {
+    width: 6vw;
+  }
+}
+/*# sourceMappingURL=Main.css.map */

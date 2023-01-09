@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskList</title>
+    <link rel="stylesheet" href="sass/Main/Main.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
+</head>
+<body>  
+    <div class="wrapper">
+        <div class="wrapper-content">
+            <div class="wrapper-content-header">
+                <div class="wrapper-content-header-wrapper">
+                    <div class="wrapper-content-header-wrapper-input">
+                        <input type="text" placeholder="Enter new task" class="wrapper-content-header-wrapper-input_input">
+                    </div>
+                    <div class="wrapper-content-header-wrapper-date">
+                        <input type="datetime-local" class="wrapper-content-header-wrapper-date_date">
+                    </div>
+                    <div class="wrapper-content-header-wrapper-button">
+                        <a class="wrapper-content-header-wrapper-button_button">
+                            <img class="wrapper-content-header-wrapper-button_button-icon" src="imgs/newTask.svg" title="New task">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="wrapper-content-tasks">
+
+            </div>
+        </div>
+    </div>
+    <script src="js/classes/Task.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
