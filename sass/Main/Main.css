@@ -385,10 +385,58 @@ body, html {
   border-radius: 2vw;
 }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 970px) {
   div.wrapper-content {
-    width: 90vw;
-    height: 95vh;
+    width: 90%;
+    height: 95%;
+  }
+  div.wrapper-content-header-wrapper {
+    margin: 0;
+  }
+  div.wrapper-content-header-wrapper-input {
+    width: 53%;
+  }
+  input.wrapper-content-header-wrapper-input_input {
+    font-size: 3.5vw;
+  }
+  div.wrapper-content-header-wrapper-date {
+    width: 53%;
+  }
+  input.wrapper-content-header-wrapper-date_date {
+    font-size: 3.5vw;
+  }
+  div.wrapper-content-header-wrapper-button {
+    width: 15%;
+  }
+  a.wrapper-content-header-wrapper-button_button {
+    width: 5vw;
+  }
+  div.wrapper-content-tasks-task {
+    width: 100%;
+  }
+  div.wrapper-content-tasks-task-header_title {
+    width: 35%;
+  }
+  h1.wrapper-content-tasks-task-header_title-title {
+    font-size: 3.5vw;
+  }
+  div.wrapper-content-tasks-task-header_date {
+    width: 25%;
+  }
+  p.wrapper-content-tasks-task-header_date-date {
+    font-size: 3.5vw;
+  }
+  div.wrapper-content-tasks-task-header_time {
+    width: 15%;
+  }
+  p.wrapper-content-tasks-task-header_time-time {
+    font-size: 3.5vw;
+  }
+  div.wrapper-content-tasks-task-header-crossout_button {
+    width: 5vw;
+  }
+  div.wrapper-content-tasks-task-header-remove_button {
+    width: 5vw;
   }
 }
 
