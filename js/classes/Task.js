@@ -1,47 +1,27 @@
 class Task{
-    constructor(text, date, parent){
+    constructor(text, date, time, code, parent){
         this.text           = text;
         this.date           = date;
+        this.time           = time;
+        this.code           = code;
         this.parent         = parent;
         this.crossoutStatus = false;
 
-        function getDate(fullDate){
-            let date,
-                time;
-
-            if( fullDate != '' ){
-                date = fullDate.split('T')[0],
-                time = fullDate.split('T')[1];
-            }else{
-                date = '',
-                time = '';
-            }
-
-            return {
-                'getDate' : function(){
-                    return date;
-                },
-                'getTime' : function(){
-                    return time;
-                }
-            }
-        }
-
-        this.data = getDate(this.date);
     }
     get task(){
         this.myTask             = document.createElement('div');
         this.myTask.className   = 'wrapper-content-tasks-task';
+        this.myTask.id          = this.code;
         this.myTask.innerHTML   = `
             <div class="wrapper-content-tasks-task-header">
                 <div class="wrapper-content-tasks-task-header_title">
                     <h1 class="wrapper-content-tasks-task-header_title-title" id="title">${this.text}</h1>
                 </div>
                 <div class="wrapper-content-tasks-task-header_date">
-                    <p class="wrapper-content-tasks-task-header_date-date" id="date">${this.data.getDate()}</p>
+                    <p class="wrapper-content-tasks-task-header_date-date" id="date">${this.date}</p>
                 </div>
                 <div class="wrapper-content-tasks-task-header_time">
-                    <p class="wrapper-content-tasks-task-header_time-time" id="time">${this.data.getTime()}</p>
+                    <p class="wrapper-content-tasks-task-header_time-time" id="time">${this.time}</p>
                 </div>
                 <div class="wrapper-content-tasks-task-header-crossout">
                     <div class="wrapper-content-tasks-task-header-crossout_button">
@@ -98,6 +78,7 @@ class Task{
             this.showContent()       
         }, 400)
     }
+
     remove(){
             // set base styles
         this.height                 = this.myTask.getBoundingClientRect().height;
@@ -105,6 +86,8 @@ class Task{
         this.myTask.style.height    = this.height + 'px'
         this.myTask.style.boxShadow = '0 0 0 0 transparent';
 
+        localStorage.removeItem(`Task${this.myTask.id}`)
+        
             // hide all content
         this.hideContent()
 
@@ -112,6 +95,7 @@ class Task{
             this.myTask.remove();
         },400)
     };
+
     crossout(){
         const crossoutIcon = this.myTask.querySelector('.wrapper-content-tasks-task-header-crossout_button-icon');
         

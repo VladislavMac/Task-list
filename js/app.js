@@ -3,21 +3,22 @@ const buttonNewTask  = document.querySelector('.wrapper-content-header-wrapper-b
 const inputEnterTask = document.querySelector('.wrapper-content-header-wrapper-input_input');
 const inputEnterDate = document.querySelector('.wrapper-content-header-wrapper-date_date');
 
+const codeWord       = 'Task'; // this word use for searching only tasks in localStorage  
+
 const cleaningInput = input =>{
     input.value = '';
 }
 
-function makeTask(text, date){
-    const parent = document.querySelector('.wrapper-content-tasks');
+function makeTask(text, code, date, time, parent){
+        // set variabless
+    const objTask            = new Task(text, date, time, code, parent),
+          task               = objTask.task;
 
-        // set variables
-    const objTask            = new Task(text, date, parent);
-          task               = objTask.task,
-          taskRemoveButton   = task.querySelector('.wrapper-content-tasks-task-header-remove_button'),
+    const taskRemoveButton   = task.querySelector('.wrapper-content-tasks-task-header-remove_button'),
           taskCrossoutButton = task.querySelector('.wrapper-content-tasks-task-header-crossout_button');
 
         // set local storage 
-    localStorage.setItem('Task=' + date, text)
+    localStorage.setItem('Task' + code, `{"text" : "${text}", "code" : "${code}", "date" : "${date}", "time" : "${time}"}`);
 
         // set functionality for buttons
     taskRemoveButton.addEventListener('click', ()=>{
@@ -36,12 +37,13 @@ function makeTask(text, date){
 
 function setLocalStorageTasks(){
     for( let i = (localStorage.length - 1); i >= 0; i--){
-        if( localStorage.key(i).indexOf('Task') != -1 ){
+        if( localStorage.key(i).indexOf(codeWord) != -1 ){
+            const text = JSON.parse(localStorage.getItem(localStorage.key(i))).text,
+                  code = JSON.parse(localStorage.getItem(localStorage.key(i))).code,
+                  date = JSON.parse(localStorage.getItem(localStorage.key(i))).date,
+                  time = JSON.parse(localStorage.getItem(localStorage.key(i))).time
 
-            const date = localStorage.key(i).split('=')[1],
-                  text = localStorage.getItem(localStorage.key(i))
-                  
-            makeTask(text, date)
+            makeTask(text, code, date, time);
         }
     }
 }
@@ -49,10 +51,25 @@ function setLocalStorageTasks(){
 setLocalStorageTasks()
 
 buttonNewTask.addEventListener('click', () =>{
-    const text    = inputEnterTask.value,
-          date    = inputEnterDate.value;
+    const inputText    = inputEnterTask.value,
+          inputDate    = inputEnterDate.value;
 
-    if( text.length != 0 ){
-        makeTask(text,date)
+    const parent = document.querySelector('.wrapper-content-tasks');
+
+    const code = new Code();
+
+    let date,
+        time;
+  
+    if( inputDate != '' ){
+        date = inputDate.split('T')[0],
+        time = inputDate.split('T')[1];
+    }else{
+        date = '',
+        time = '';
+    }
+  
+    if( inputText.length != 0 ){
+        makeTask(inputText, code.code, date, time, parent)
     }
 });
