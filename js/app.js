@@ -9,8 +9,10 @@ const cleaningInput = input =>{
     input.value = '';
 }
 
-function makeTask(text, code, date, time, parent){
+function makeTask(text, code, date, time){
         // set variabless
+    const parent = document.querySelector('.wrapper-content-tasks');
+    
     const objTask            = new Task(text, date, time, code, parent),
           task               = objTask.task;
 
@@ -54,8 +56,6 @@ buttonNewTask.addEventListener('click', () =>{
     const inputText    = inputEnterTask.value,
           inputDate    = inputEnterDate.value;
 
-    const parent = document.querySelector('.wrapper-content-tasks');
-
     const code = new Code();
 
     let date,
@@ -70,6 +70,6 @@ buttonNewTask.addEventListener('click', () =>{
     }
   
     if( inputText.length != 0 ){
-        makeTask(inputText, code.code, date, time, parent)
+        makeTask(inputText, code.code, date, time)
     }
 });
