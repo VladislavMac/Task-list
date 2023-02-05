@@ -314,8 +314,8 @@
 @media only screen and (max-width:970px){
             // Content
         div.wrapper-content{
-            width: 90%;
-            height: 95%;
+            width: 100%;
+            height: 100%;
         }
     
             // Header 
@@ -388,30 +388,49 @@
         // Header 
     div.wrapper-content-header{
         border-radius: 0;
+        height: 20%;
     }
     div.wrapper-content-header-wrapper{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
         margin: 0;
     }
 
     div.wrapper-content-header-wrapper-input{
-        width: 53%;
+        height: 35%;
+        width: 90%;
+
+        border-bottom: 0.1vw solid #757575;
     }
     input.wrapper-content-header-wrapper-input_input{
         font-size: 4.5vw;
+        text-align: start;
     }
 
     div.wrapper-content-header-wrapper-date{
-        width: 53%;
+        height: 35%;
+        width: 90%;
+
+        border-bottom: 0.1vw solid #757575;
     }
     input.wrapper-content-header-wrapper-date_date{
         font-size: 4.5vw;
+        text-align: start;
     }
 
     div.wrapper-content-header-wrapper-button{
-        width: 15%;
+        width: 90%;
+        height: 30%;
+
+        display: flex;
+        justify-content: end;
+        align-items: center;
     }
     a.wrapper-content-header-wrapper-button_button{
-        width: 6vw;
+        width: 5vw;
     }
 
         // Task
