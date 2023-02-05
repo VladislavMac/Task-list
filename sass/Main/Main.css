@@ -447,7 +447,7 @@ body, html {
   }
   div.wrapper-content-header {
     border-radius: 0;
-    height: 20%;
+    height: 30%;
   }
   div.wrapper-content-header-wrapper {
     display: -webkit-box;
@@ -485,7 +485,7 @@ body, html {
   }
   div.wrapper-content-header-wrapper-button {
     width: 90%;
-    height: 30%;
+    height: 35%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -497,7 +497,7 @@ body, html {
             align-items: center;
   }
   a.wrapper-content-header-wrapper-button_button {
-    width: 5vw;
+    width: 7vw;
   }
   div.wrapper-content-tasks-task {
     width: 100%;
