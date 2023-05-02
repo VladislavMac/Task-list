@@ -1,4 +1,4 @@
-class Code{
+class IDCode{
     get code(){
         const tasks = document.querySelectorAll('.wrapper-content-tasks-task');
     

@@ -14,7 +14,6 @@
         width: 100%;
         height: 100%;
 
-        background-image: url("../../imgs/backgrounds/morning.jpg");
         background-repeat: no-repeat;
         background-size: cover;
 
@@ -23,15 +22,15 @@
         align-items: center;
         &-content{
             width: 75vw;
-            height: 85vh;
+            height: 95vh;
 
-            background-image: linear-gradient(45deg, rgba(0, 225, 255, 0.219), rgba(0, 195, 255, 0.233));
+            background: #ffffffb6;
 
             border-radius: 2vw;
             border-bottom-right-radius: 0.2vw;
             border-bottom-left-radius: 0.2vw;
 
-            box-shadow: 0 0 1vw 0.1vw rgba(0, 0, 0, 0.562);
+            box-shadow: 0 0.5vw 1vw 0.1vw rgba(0, 0, 0, 0.144); 
 
             display: flex;
             flex-direction: column;
@@ -39,15 +38,19 @@
             transition-duration: 0.4s;
             &-header{
                 width: 100%;
-                height: 10%;
+                height: 7%;
 
                 // border-radius: 2vw;
                 border-top-left-radius: 2vw;
                 border-top-right-radius: 2vw;
 
-                background-image: linear-gradient(45deg, rgb(0, 225, 255), rgba(0, 195, 255, 0.568));
-
-                box-shadow: 0 0.5vw 1vw 0.1vw rgba(0, 0, 0, 0.587);
+                // background-image: linear-gradient(45deg, rgb(0, 225, 255), rgba(0, 195, 255, 0.568));
+                background: linear-gradient(rgb(0, 225, 255), rgba(1, 154, 201, 0.568));
+            
+                border-bottom: 0.1vw solid #b1b1b1;
+                // box-shadow: 0 1vw 1vw 0 #0000002a;
+                
+                // box-shadow: 0 0.6vw 0.4vw -0.4vw rgba(0, 0, 0, .2);
 
                 display: flex;
                 justify-content: center;
@@ -82,7 +85,10 @@
                             border: none;
 
                             font-family: 'PT Sans', sans-serif;
-                            font-size: 2.5vw;
+                            font-size: 2vw;
+                        }
+                        &_input::placeholder{
+                            color: #fff;
                         }
                     }
                     &-date{
@@ -99,16 +105,16 @@
                             text-align: center;
                             cursor: pointer;
 
-                            font-size: 3vw;
+                            font-size: 2.5vw;
                             font-weight: bold;
 
-                            color: #757575;
+                            color: #fff;
 
                             background: transparent;
                             border: none;
 
                             font-family: 'PT Sans', sans-serif;
-                            font-size: 2.5vw;
+                            font-size: 2vw;
                         }
                     }
                     &-button{
@@ -121,7 +127,7 @@
 
                         overflow: hidden;
                         &_button{
-                            width: 3vw;
+                            width: 2.5vw;
                             height: 100%;
                             
                             display: flex;
@@ -157,7 +163,7 @@
                     border-bottom-left-radius: 0;
 
                     // box-shadow: 0 0 1vw 0.1vw rgb(0, 0, 0);
-                    background-image: linear-gradient(45deg, rgb(0, 225, 255), rgba(0, 195, 255, 0.568));
+                    background: linear-gradient(45deg, rgb(0, 225, 255), rgba(0, 195, 255, 0.568));
 
                     display: flex;
                     justify-content: center;
@@ -189,7 +195,7 @@
 
                             overflow-x: auto;
                             h1{
-                                font-size: 2vw;
+                                font-size: 1.5vw;
                                 font-weight: bold;
                             }
                         }
@@ -205,7 +211,7 @@
                             p{
                                 overflow: hidden;
 
-                                font-size: 2vw;
+                                font-size: 1.5vw;
                                 font-weight: normal;
                             }
                         }
@@ -219,11 +225,11 @@
 
                             overflow: hidden;
                             p{
-                                font-size: 2vw;
+                                font-size: 1.5vw;
                                 font-weight: normal;
                             }
                             span{
-                                font-size: 2vw;
+                                font-size: 1.5vw;
                                 font-weight: bold;
                             }
                         }
@@ -238,7 +244,7 @@
                             overflow: hidden;
 
                             &_button{
-                                width: 3vw;
+                                width: 2.5vw;
                                 height: 100%;
 
                                 display: flex;
@@ -267,7 +273,7 @@
                             overflow: hidden;
                             
                             &_button{
-                                width: 3vw;
+                                width: 2.5vw;
                                 height: 100%;
 
                                 display: flex;
@@ -309,6 +315,55 @@
 .wrapper-content-tasks-task-header_title::-webkit-scrollbar-thumb{
     background: rgba(0, 225, 255, 0.783);
     border-radius: 2vw;
+}
+
+@media only screen and (max-width:1140px){
+
+div.wrapper{
+    &-content{
+        width: 90vw;    
+    }
+}
+
+input.wrapper-content-header-wrapper-input_input{
+    font-size: 2.3vw;
+}
+
+input.wrapper-content-header-wrapper-date_date{
+    font-size: 2.3vw;
+}
+
+div.wrapper-content-header-wrapper-button{
+    width: 15%;
+}
+a.wrapper-content-header-wrapper-button_button{
+    width: 4vw;
+}
+
+h1.wrapper-content-tasks-task-header_title-title{
+    font-size: 2.3vw;
+}
+
+div.wrapper-content-tasks-task-header_date{
+    width: 25%;
+}
+p.wrapper-content-tasks-task-header_date-date{
+    font-size: 2.3vw;
+}
+
+div.wrapper-content-tasks-task-header_time{
+    width: 15%;
+}
+p.wrapper-content-tasks-task-header_time-time{
+    font-size: 2.3vw;
+}
+
+div.wrapper-content-tasks-task-header-crossout_button{
+    width: 4vw;
+}
+div.wrapper-content-tasks-task-header-remove_button{
+    width: 4vw;
+}
 }
 
 @media only screen and (max-width:970px){

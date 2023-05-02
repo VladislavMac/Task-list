@@ -43,7 +43,7 @@ class Task{
         this.myTask.style.width     = '0%';
         // this.myTask.style.height    = '8vh';
         this.myTask.style.boxShadow = '0 0 0 0 transparent';
-
+        this.myTask.style.borderBottom = ''
         
         this.hideContent = () =>{
             this.myTask.querySelector('.wrapper-content-tasks-task-header_date').style.display = 'none'  
@@ -69,8 +69,9 @@ class Task{
         
         setTimeout(() =>{
                 // set base styles
-            this.myTask.style.width     = '97%';
-            this.myTask.style.boxShadow = '0 0 1vw 0.1vw rgb(0, 0, 0)'; 
+            this.myTask.style.width        = '97%';
+            this.myTask.style.boxShadow    = '0 0.5vw 1vw 0.1vw rgba(0, 0, 0, 0.144)'; 
+            this.myTask.style.borderBottom = '0.2vw solid #b1b1b1'; 
         }, 5)
 
         setTimeout(() =>{

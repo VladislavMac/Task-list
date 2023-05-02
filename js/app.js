@@ -56,7 +56,7 @@ buttonNewTask.addEventListener('click', () =>{
     const inputText    = inputEnterTask.value,
           inputDate    = inputEnterDate.value;
 
-    const code = new Code();
+    const code = new IDCode();
 
     let date,
         time;
@@ -73,3 +73,42 @@ buttonNewTask.addEventListener('click', () =>{
         makeTask(inputText, code.code, date, time)
     }
 });
+
+// Background
+
+const getBackground = () =>{
+    let background,
+        hour =  new Date().getHours();
+    
+    if( hour >= 5 && hour <= 12 ){
+        background = 'morning';
+    }
+    else if( hour >= 13 && hour <= 18 ){
+        background = 'day';
+    }
+    else if( hour >= 19 && hour <= 23 ){
+        background = 'evening';
+    }
+    else{
+        background = 'night';
+    }
+
+    return background
+}
+
+const setDynamicBackground = (block) =>{
+    block.style.backgroundImage = `url("imgs/backgrounds/${getBackground()}.jpg")`
+}
+
+const wrapper = document.querySelector('.wrapper');
+
+// set start background
+setDynamicBackground(wrapper);
+
+setInterval(() =>{
+    setDynamicBackground(wrapper);
+}, 1000)
+
+// wrapperContent.style.background
+// wrapperContentHeader.style.background
+// wrapperContentTasksTask.style.background
